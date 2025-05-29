@@ -1,0 +1,91 @@
+table dPlanoContas
+	lineageTag: 06ddbb81-b542-40f3-b067-c19c74d5b2f1
+
+	column 'Cod Conta'
+		dataType: string
+		lineageTag: 5d2a223d-40c8-4a76-9a08-82e99d227907
+		summarizeBy: none
+		sourceColumn: Cod Conta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cod Nivel 1'
+		dataType: string
+		lineageTag: 0636d554-4777-4ed4-841b-a5ef3f67551b
+		summarizeBy: none
+		sourceColumn: Cod Nivel 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conta Nivel 1'
+		dataType: string
+		lineageTag: 201eb6ed-9efc-4384-af81-7a78f70c2218
+		summarizeBy: none
+		sourceColumn: Conta Nivel 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cod Conta Nivel 2'
+		dataType: string
+		lineageTag: 6e00bbd2-69d9-426c-9a38-53f978ea03a6
+		summarizeBy: none
+		sourceColumn: Cod Conta Nivel 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conta Nivel 2'
+		dataType: string
+		lineageTag: 07666b55-e389-4e24-a9b1-a82dc7b1ff64
+		summarizeBy: none
+		sourceColumn: Conta Nivel 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conta Nível 3'
+		dataType: string
+		lineageTag: 73916fec-589d-4e89-8461-3bb822766025
+		summarizeBy: none
+		sourceColumn: Conta Nível 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Conta'
+		dataType: string
+		lineageTag: 61019300-2878-4d97-b202-3dac67a804c5
+		summarizeBy: none
+		sourceColumn: Tipo Conta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Lançamento'
+		dataType: string
+		lineageTag: 2ccb6e39-8851-4ad4-96ac-5bf60a8d6ed2
+		summarizeBy: none
+		sourceColumn: Tipo Lançamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ordem Tipo Lançamento'
+		dataType: string
+		lineageTag: 512698f8-53e7-47d1-a4c6-4db70124e96e
+		summarizeBy: none
+		sourceColumn: Ordem Tipo Lançamento
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dPlanoContas = m
+		mode: import
+		source =
+				let
+				    Source = BaseDados,
+				    #"C:\Users\jhase\Documents\PROJETOS\FLUXO DE CAIXA\Desafio\01  Base de Dados\_BaseDados xlsx" = Source{[#"Folder Path"="C:\Users\jhase\Documents\PROJETOS\FLUXO DE CAIXA\Desafio\01. Base de Dados\",Name="BaseDados.xlsx"]}[Content],
+				    #"Imported Excel Workbook" = Excel.Workbook(#"C:\Users\jhase\Documents\PROJETOS\FLUXO DE CAIXA\Desafio\01  Base de Dados\_BaseDados xlsx"),
+				    #"Filtered Rows" = Table.SelectRows(#"Imported Excel Workbook", each ([Kind] = "Table")),
+				    dPlanoContas_Table = #"Filtered Rows"{[Item="dPlanoContas",Kind="Table"]}[Data]
+				in
+				    dPlanoContas_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

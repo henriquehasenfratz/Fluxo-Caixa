@@ -1,0 +1,88 @@
+table fPagamentos
+	lineageTag: e3e6358a-85a3-4788-a5f3-c03164a914c7
+
+	column 'Data Emissão'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 23e64bcd-5f9e-4cfd-9a4f-8a00192e6cdf
+		summarizeBy: none
+		sourceColumn: Data Emissão
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Data Vencimento'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: fa797783-f8b5-4718-8ba9-b70970842717
+		summarizeBy: none
+		sourceColumn: Data Vencimento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Data Liquidação'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 15be93c2-8994-471e-bfa8-36807573c23b
+		summarizeBy: none
+		sourceColumn: Data Liquidação
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Cod Plano Contas'
+		dataType: double
+		lineageTag: 32ad3176-f80e-463c-93b3-07edba2f275c
+		summarizeBy: none
+		sourceColumn: Cod Plano Contas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Fornecedor
+		dataType: string
+		lineageTag: f65eadf5-25b0-41ca-8630-9182693119d3
+		summarizeBy: none
+		sourceColumn: Fornecedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column UF
+		dataType: string
+		lineageTag: 207b9794-c98d-436c-8e68-3c9537a4d5d8
+		summarizeBy: none
+		sourceColumn: UF
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Valor Pago'
+		dataType: double
+		lineageTag: c5767afd-101e-4960-a4bc-20112bcbcaf6
+		summarizeBy: sum
+		sourceColumn: Valor Pago
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition fPagamentos = m
+		mode: import
+		source =
+				let
+				    Source = BaseDados,
+				    #"C:\Users\jhase\Documents\PROJETOS\FLUXO DE CAIXA\Desafio\01  Base de Dados\_BaseDados xlsx" = Source{[#"Folder Path"="C:\Users\jhase\Documents\PROJETOS\FLUXO DE CAIXA\Desafio\01. Base de Dados\",Name="BaseDados.xlsx"]}[Content],
+				    #"Imported Excel Workbook" = Excel.Workbook(#"C:\Users\jhase\Documents\PROJETOS\FLUXO DE CAIXA\Desafio\01  Base de Dados\_BaseDados xlsx"),
+				    #"Filtered Rows" = Table.SelectRows(#"Imported Excel Workbook", each ([Kind] = "Table")),
+				    fPagamentos_Table = #"Filtered Rows"{[Item="fPagamentos",Kind="Table"]}[Data]
+				in
+				    fPagamentos_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,89 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 69,
+            "y": 18
+          },
+          "nodeIndex": "dPlanoContas",
+          "nodeLineageTag": "06ddbb81-b542-40f3-b067-c19c74d5b2f1",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 1,
+          "expandedHeight": 296
+        },
+        {
+          "location": {
+            "x": 159,
+            "y": 398
+          },
+          "nodeIndex": "fPagamentos",
+          "nodeLineageTag": "e3e6358a-85a3-4788-a5f3-c03164a914c7",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 532,
+            "y": 404
+          },
+          "nodeIndex": "fRecebimentos",
+          "nodeLineageTag": "165667f4-49d3-4983-9843-75c602d155af",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 527,
+            "y": 28
+          },
+          "nodeIndex": "dCalendario",
+          "nodeLineageTag": "a964c785-2e60-460d-9e05-c49b642b93f2",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 4,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 747,
+            "y": 271
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "f6005536-3aa0-4665-8605-d252caec85a5",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

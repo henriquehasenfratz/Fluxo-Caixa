@@ -1,0 +1,11 @@
+expression BaseDados =
+		let
+		    Source = Folder.Files("C:\Users\jhase\Documents\PROJETOS\FLUXO DE CAIXA\Desafio\01. Base de Dados")
+		in
+		    Source
+	lineageTag: c5f2b559-7d11-45bf-9895-d0cdd6cb576b
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Fluxo de Caixa"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a2f2c575-7bde-49dc-a0ce-85d58c950ff6"
+  }
+}

@@ -1,0 +1,93 @@
+table Medidas
+	lineageTag: f6005536-3aa0-4665-8605-d252caec85a5
+
+	measure mReceita =
+			
+			SUM(fRecebimentos[Valor Recebido])
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: 9dbb9f0d-1f4f-44c2-8314-09cc8ced0d55
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure mReceitasOperacionais =
+			
+			
+			CALCULATE(
+			    [mReceita],
+			    dPlanoContas[Conta Nivel 2] = "RECEITA OPERACIONAIS"
+			)
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: 804a520e-5998-459e-ba07-8dc65c726d88
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure mDespesas =
+			
+			SUM(fPagamentos[Valor Pago])
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: f9cf25f4-0802-473e-bd73-24edbdcb581b
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure mSaldo = [mReceita] - [mDespesas]
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: 8138f190-ec02-4b2c-982c-ca0b648d7775
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure mReceitaOperacional =
+			
+			
+			CALCULATE(
+			    [mSaldo],
+			    FILTER(
+			        ALL(dPlanoContas),
+			        dPlanoContas[Conta Nivel 2] = "RECEITA OPERACIONAIS")
+			)
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: e1467c15-7b75-470f-a391-4d8045442625
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure mCustoVariavel =
+			
+			
+			CALCULATE(
+			    [mSaldo],
+			    FILTER(
+			        ALL(dPlanoContas),
+			        dPlanoContas[Tipo Lançamento] = "VARIÁVEL")
+			)
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: d28ea360-b30c-47a5-abc3-bbc76c8354f8
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure mMargemContribuicao = [mReceitaOperacional] + [mCustoVariavel]
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: b0b2bc7f-ae4a-4875-b5e1-00f89fe79d8c
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column Column1
+		dataType: string
+		isHidden
+		lineageTag: 411015e6-5e25-42cf-af07-5425176ca152
+		summarizeBy: none
+		sourceColumn: Column1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

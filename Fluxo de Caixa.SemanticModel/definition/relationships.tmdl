@@ -1,0 +1,16 @@
+relationship bd924350-f9ce-51ed-8131-56201aafc25a
+	fromColumn: fPagamentos.'Cod Plano Contas'
+	toColumn: dPlanoContas.'Cod Conta'
+
+relationship fd1e0614-5789-3751-0fb8-2bd7264df142
+	fromColumn: fRecebimentos.'Cod Plano Contas'
+	toColumn: dPlanoContas.'Cod Conta'
+
+relationship 118adcdf-88a0-1a46-5f52-138a7ea25a4c
+	fromColumn: fPagamentos.'Data Emissão'
+	toColumn: dCalendario.Data
+
+relationship 24ffa007-c68f-b176-8439-8dc4ecb9bd8d
+	fromColumn: fRecebimentos.'Data Emissão'
+	toColumn: dCalendario.Data
+
