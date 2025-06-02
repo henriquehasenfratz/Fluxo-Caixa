@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
-  "name": "336e5600c7ebb524e8be",
+  "name": "ecaf3dab5adb43cb6342",
   "position": {
-    "x": 249.63081861958267,
-    "y": 652.32744783306589,
-    "z": 10000,
-    "height": 31.845906902086679,
-    "width": 98.61958266452649,
-    "tabOrder": 11000
+    "x": 722.72040302267,
+    "y": 652.896725440806,
+    "z": 14000,
+    "height": 32.6448362720403,
+    "width": 98.841309823677577,
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "actionButton",
@@ -29,7 +29,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Tabela'"
+                  "Value": "'Mensal'"
                 }
               }
             }
@@ -139,7 +139,7 @@
             "bookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'2ce61deeddc01ccc95d9'"
+                  "Value": "'58e1579909e77e58809d'"
                 }
               }
             }
@@ -153,6 +153,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'YTD'"
                 }
               }
             }

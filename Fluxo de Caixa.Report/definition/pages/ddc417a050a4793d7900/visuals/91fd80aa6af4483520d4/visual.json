@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
-  "name": "2d64cde2fceb0b2743bb",
+  "name": "91fd80aa6af4483520d4",
   "position": {
-    "x": 450.68010075566747,
-    "y": 230.32745591939545,
-    "z": 3000,
-    "height": 418.0352644836272,
-    "width": 812.49370277078083,
-    "tabOrder": 3000
+    "x": 450.51968503937007,
+    "y": 230.8031496062992,
+    "z": 12000,
+    "height": 418.26771653543307,
+    "width": 812.34645669291342,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -72,12 +72,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "mReceita"
+                  "Property": "mReceitaAcum"
                 }
               },
-              "queryRef": "Medidas.mReceita",
-              "nativeQueryRef": "Receita",
-              "displayName": "Receita"
+              "queryRef": "Medidas.mReceitaAcum",
+              "nativeQueryRef": "Receita Acumulada",
+              "displayName": "Receita Acumulada"
             },
             {
               "field": {
@@ -87,12 +87,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "mReceitaLY"
+                  "Property": "Receita YTD LY"
                 }
               },
-              "queryRef": "Medidas.mReceitaLY",
-              "nativeQueryRef": "ReceitaLY",
-              "displayName": "ReceitaLY"
+              "queryRef": "Medidas.Receita YTD LY",
+              "nativeQueryRef": "Receita Acumulada YTD",
+              "displayName": "Receita Acumulada YTD"
             }
           ]
         }
@@ -148,6 +148,13 @@
                   "Value": "'InsideCenter'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
             }
           }
         }
@@ -160,7 +167,21 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Receita por Ano, Trimestre e Mês'"
+                  "Value": "'Receita Acumulada'"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Normal'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
                 }
               }
             }
@@ -170,78 +191,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f11f8dad8d45ba364a56",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dCalendario"
-              }
-            },
-            "Property": "Ano"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d77bb26dd5da2723293f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dCalendario"
-              }
-            },
-            "Property": "TrimestreNome"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "0401d508053a961e983e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dCalendario"
-              }
-            },
-            "Property": "MesNomeAbreviado"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c0bc19fcc3372055eed6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "mReceita"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c45f096ccccd45b28364",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "mReceitaLY"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "isHidden": true
 }

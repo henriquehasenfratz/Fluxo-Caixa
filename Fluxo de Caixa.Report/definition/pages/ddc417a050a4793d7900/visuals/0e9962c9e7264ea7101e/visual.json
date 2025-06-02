@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
   "name": "0e9962c9e7264ea7101e",
   "position": {
-    "x": 396.272040302267,
-    "y": 80.705289672544069,
-    "z": 9,
-    "height": 80.705289672544069,
-    "width": 171.38539042821156,
-    "tabOrder": 9
+    "x": 466.48052902277738,
+    "y": 81.822189566495226,
+    "z": 8000,
+    "height": 80.881704628949308,
+    "width": 192.79941219691403,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "card",
@@ -51,28 +51,75 @@
         "isDefaultSort": true
       }
     },
-    "objects": {
-      "labels": [
+    "visualContainerObjects": {
+      "title": [
         {
           "properties": {
-            "fontFamily": {
+            "titleWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             },
-            "fontSize": {
+            "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "100D"
                 }
               }
-            },
-            "labelDisplayUnits": {
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "titleFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "valueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
                 }
               }
             }

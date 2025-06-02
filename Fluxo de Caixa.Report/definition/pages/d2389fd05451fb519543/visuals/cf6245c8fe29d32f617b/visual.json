@@ -1,55 +1,97 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
-  "name": "b66fec9fb77070eb2279",
+  "name": "cf6245c8fe29d32f617b",
   "position": {
-    "x": 29.924433249370274,
-    "y": 78.891687657430722,
-    "z": 0,
-    "height": 83.4256926952141,
-    "width": 170.47858942065491,
-    "tabOrder": 0
+    "x": 11.285819250551066,
+    "y": 585.9221160911095,
+    "z": 3003,
+    "height": 60.191036002939015,
+    "width": 221.01396032329171,
+    "tabOrder": 3002
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "slicer",
     "query": {
       "queryState": {
         "Values": {
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "fPagamentos"
                     }
                   },
-                  "Property": "mReceita"
+                  "Property": "Fornecedor"
                 }
               },
-              "queryRef": "Medidas.mReceita",
-              "nativeQueryRef": "mReceita"
+              "queryRef": "fPagamentos.Fornecedor",
+              "nativeQueryRef": "Fornecedor",
+              "active": true
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Medidas"
-                  }
-                },
-                "Property": "mReceita"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "strictSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "title": [

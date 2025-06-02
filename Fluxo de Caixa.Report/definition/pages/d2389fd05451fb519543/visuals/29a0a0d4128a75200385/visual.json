@@ -4,10 +4,10 @@
   "position": {
     "x": 1154.8717948717949,
     "y": 18.461538461538463,
-    "z": 1,
+    "z": 1000,
     "height": 60.512820512820511,
     "width": 108.71794871794872,
-    "tabOrder": 1
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "slicer",
@@ -88,7 +88,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "2017L"
+                                "Value": "2019L"
                               }
                             }
                           ]
@@ -134,7 +134,7 @@
             "strictSingleSelect": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }

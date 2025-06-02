@@ -4,10 +4,10 @@
   "position": {
     "x": 29.924433249370274,
     "y": 230.32745591939545,
-    "z": 2,
+    "z": 2000,
     "height": 418.0352644836272,
-    "width": 340.05037783375315,
-    "tabOrder": 2
+    "width": 382.67002518891684,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -155,5 +155,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bf3515ab50ebaead9631",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dPlanoContas"
+              }
+            },
+            "Property": "Conta Nível 3"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ef384f6000c75f21db10",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "mReceita"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

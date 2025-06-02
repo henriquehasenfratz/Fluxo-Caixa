@@ -51,6 +51,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "cod nivel 1": {
@@ -4346,29 +4349,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida.m_receitas_operacionais": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "mReceitasOperacionais"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "m receitas operacionais": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "mReceitasOperacionais": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
 			    "medida.m_despesas": {
 			      "Definition": {
 			        "Binding": {
@@ -4389,71 +4369,35 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Despesas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
-			    "medida.m_saldo": {
+			    "medida.m_lancamento": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "mSaldo"
+			          "ConceptualProperty": "mLancamento"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "m saldo": {
+			          "m lancamento": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "mSaldo": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "medida.m_receita_operacional": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "mReceitaOperacional"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "m receita operacional": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "mReceitaOperacional": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "medida.m_custo_variavel": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "mCustoVariavel"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "m custo variavel": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "mCustoVariavel": {
+			          "mLancamento": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -4480,6 +4424,693 @@ cultureInfo pt-BR
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Margem Contribuição": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.m_receita_acum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "mReceitaAcum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "m receita acum": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mReceitaAcum": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Receita Acumulada": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.m_receita_LY": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "mReceitaLY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "m receita LY": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mReceitaLY": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ReceitaLY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.m_despesa_total": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "mDespesaTotal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "m despesa total": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mDespesaTotal": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "m despesa aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "m despesa overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "medida.m_lancamento_emissao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "mLancamentoEmissao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "m lancamento emissao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mLancamentoEmissao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.saldo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Saldo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "saldo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "d_mascara": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dMascara"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "d mascara": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dMascara": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "mascara": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "d makeup": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "d blusher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "d lipstick": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "makeup": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "blusher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "lipstick": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "d make-up": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "d foundation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "d powder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "d perfume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "d_mascara.cod_máscara": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dMascara",
+			          "ConceptualProperty": "Cod Máscara"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cod máscara": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "d_mascara.máscara": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dMascara",
+			          "ConceptualProperty": "Máscara"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "máscara": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Conta Nivel 1": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida_selecionada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MedidaSelecionada"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medida selecionada": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MedidaSelecionada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida_selecionada.idid": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MedidaSelecionada",
+			          "ConceptualProperty": "IDID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "idid": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida_selecionada.column_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MedidaSelecionada",
+			          "ConceptualProperty": "Column1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "column 1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Column1": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Tipo Data": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.data_selecionada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "DataSelecionada"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data selecionada": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DataSelecionada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "information selecionada": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact selecionada": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info selecionada": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic selecionada": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document selecionada": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure selecionada": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record selecionada": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "medida.m_lancamento_selecionado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "mLancamentoSelecionado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "m lancamento selecionado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mLancamentoSelecionado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.lançamentos_por_emissão": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Lançamentos por Emissão"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lançamentos por emissão": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.lançamentos_por_liquidação": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Lançamentos por Liquidação"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lançamentos por liquidação": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.receita_YTD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Receita YTD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "receita YTD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "receita year to date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "medida.receita_YTD_LY": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Receita YTD LY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "receita YTD LY": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "receita year to date ly": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.498
+			          }
+			        },
+			        {
+			          "Receita Acumulada YTD": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.var_ano_receita": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Var Ano Receita"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% var ano receita": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage var ano receita": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct var ano receita": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "medida.desp__diretas_x_receita": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Desp. Diretas x Receita"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% desp. diretas x receita": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.AV_selecionada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "AV Selecionada"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "AV selecionada": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AV": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -4667,6 +5298,851 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "d_plano_contas_have_f_pagamentos"
+			        }
+			      ]
+			    },
+			    "d_plano_conta_has_d_mascara": {
+			      "Binding": {
+			        "ConceptualEntity": "dPlanoContas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_plano_conta": {
+			          "Target": {
+			            "Entity": "d_plano_conta"
+			          }
+			        },
+			        "d_mascara": {
+			          "Target": {
+			            "Entity": "d_mascara"
+			          },
+			          "Nouns": [
+			            {
+			              "cod nivel 1": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_plano_conta"
+			            },
+			            "Object": {
+			              "Role": "d_mascara"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_plano_contas_have_d_mascaras"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_mascara"
+			            },
+			            "Object": {
+			              "Role": "d_plano_conta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_mascaras_have_d_plano_contas"
+			        }
+			      ]
+			    },
+			    "medida_has_AV_selecionada": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.AV_selecionada": {
+			          "Target": {
+			            "Entity": "medida.AV_selecionada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.AV_selecionada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_AV_selecionada"
+			        }
+			      ]
+			    },
+			    "f_recebimento_has_medida_desp__diretas_x_receita": {
+			      "Binding": {
+			        "ConceptualEntity": "fRecebimentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_recebimento": {
+			          "Target": {
+			            "Entity": "f_recebimento"
+			          }
+			        },
+			        "medida.desp__diretas_x_receita": {
+			          "Target": {
+			            "Entity": "medida.desp__diretas_x_receita"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_recebimento"
+			            },
+			            "Object": {
+			              "Role": "medida.desp__diretas_x_receita"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_recebimentos_have__desp__diretas_x_receita"
+			        }
+			      ]
+			    },
+			    "f_pagamento_has_medida_desp__diretas_x_receita": {
+			      "Binding": {
+			        "ConceptualEntity": "fPagamentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pagamento": {
+			          "Target": {
+			            "Entity": "f_pagamento"
+			          }
+			        },
+			        "medida.desp__diretas_x_receita": {
+			          "Target": {
+			            "Entity": "medida.desp__diretas_x_receita"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pagamento"
+			            },
+			            "Object": {
+			              "Role": "medida.desp__diretas_x_receita"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pagamentos_have__desp__diretas_x_receita"
+			        }
+			      ]
+			    },
+			    "f_recebimento_has_medida_var_ano_receita": {
+			      "Binding": {
+			        "ConceptualEntity": "fRecebimentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_recebimento": {
+			          "Target": {
+			            "Entity": "f_recebimento"
+			          }
+			        },
+			        "medida.var_ano_receita": {
+			          "Target": {
+			            "Entity": "medida.var_ano_receita"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_recebimento"
+			            },
+			            "Object": {
+			              "Role": "medida.var_ano_receita"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_recebimentos_have__var_ano_receita"
+			        }
+			      ]
+			    },
+			    "f_recebimento_has_medida_receita_YTD_LY": {
+			      "Binding": {
+			        "ConceptualEntity": "fRecebimentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_recebimento": {
+			          "Target": {
+			            "Entity": "f_recebimento"
+			          }
+			        },
+			        "medida.receita_YTD_LY": {
+			          "Target": {
+			            "Entity": "medida.receita_YTD_LY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_recebimento"
+			            },
+			            "Object": {
+			              "Role": "medida.receita_YTD_LY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_recebimentos_have_receita_YTD_LY"
+			        }
+			      ]
+			    },
+			    "f_recebimento_has_medida_receita_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "fRecebimentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_recebimento": {
+			          "Target": {
+			            "Entity": "f_recebimento"
+			          }
+			        },
+			        "medida.receita_YTD": {
+			          "Target": {
+			            "Entity": "medida.receita_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_recebimento"
+			            },
+			            "Object": {
+			              "Role": "medida.receita_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_recebimentos_have_receita_YTD"
+			        }
+			      ]
+			    },
+			    "f_recebimento_has_medida_lançamentos_por_liquidação": {
+			      "Binding": {
+			        "ConceptualEntity": "fRecebimentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_recebimento": {
+			          "Target": {
+			            "Entity": "f_recebimento"
+			          }
+			        },
+			        "medida.lançamentos_por_liquidação": {
+			          "Target": {
+			            "Entity": "medida.lançamentos_por_liquidação"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_recebimento"
+			            },
+			            "Object": {
+			              "Role": "medida.lançamentos_por_liquidação"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_recebimentos_have_lançamentos_por_liquidação"
+			        }
+			      ]
+			    },
+			    "f_pagamento_has_medida_lançamentos_por_liquidação": {
+			      "Binding": {
+			        "ConceptualEntity": "fPagamentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pagamento": {
+			          "Target": {
+			            "Entity": "f_pagamento"
+			          }
+			        },
+			        "medida.lançamentos_por_liquidação": {
+			          "Target": {
+			            "Entity": "medida.lançamentos_por_liquidação"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pagamento"
+			            },
+			            "Object": {
+			              "Role": "medida.lançamentos_por_liquidação"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pagamentos_have_lançamentos_por_liquidação"
+			        }
+			      ]
+			    },
+			    "f_recebimento_has_medida_lançamentos_por_emissão": {
+			      "Binding": {
+			        "ConceptualEntity": "fRecebimentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_recebimento": {
+			          "Target": {
+			            "Entity": "f_recebimento"
+			          }
+			        },
+			        "medida.lançamentos_por_emissão": {
+			          "Target": {
+			            "Entity": "medida.lançamentos_por_emissão"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_recebimento"
+			            },
+			            "Object": {
+			              "Role": "medida.lançamentos_por_emissão"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_recebimentos_have_lançamentos_por_emissão"
+			        }
+			      ]
+			    },
+			    "f_pagamento_has_medida_lançamentos_por_emissão": {
+			      "Binding": {
+			        "ConceptualEntity": "fPagamentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pagamento": {
+			          "Target": {
+			            "Entity": "f_pagamento"
+			          }
+			        },
+			        "medida.lançamentos_por_emissão": {
+			          "Target": {
+			            "Entity": "medida.lançamentos_por_emissão"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pagamento"
+			            },
+			            "Object": {
+			              "Role": "medida.lançamentos_por_emissão"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pagamentos_have_lançamentos_por_emissão"
+			        }
+			      ]
+			    },
+			    "medida_has_m_lancamento_selecionado": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.m_lancamento_selecionado": {
+			          "Target": {
+			            "Entity": "medida.m_lancamento_selecionado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.m_lancamento_selecionado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_m_lancamento_selecionado"
+			        }
+			      ]
+			    },
+			    "medida_has_data_selecionada": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.data_selecionada": {
+			          "Target": {
+			            "Entity": "medida.data_selecionada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.data_selecionada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_data_selecionada"
+			        }
+			      ]
+			    },
+			    "medida_selecionada_has_column_1": {
+			      "Binding": {
+			        "ConceptualEntity": "MedidaSelecionada"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida_selecionada": {
+			          "Target": {
+			            "Entity": "medida_selecionada"
+			          }
+			        },
+			        "medida_selecionada.column_1": {
+			          "Target": {
+			            "Entity": "medida_selecionada.column_1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida_selecionada"
+			            },
+			            "Object": {
+			              "Role": "medida_selecionada.column_1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medida_selecionadas_have_column_1"
+			        }
+			      ]
+			    },
+			    "medida_selecionada_has_idid": {
+			      "Binding": {
+			        "ConceptualEntity": "MedidaSelecionada"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida_selecionada": {
+			          "Target": {
+			            "Entity": "medida_selecionada"
+			          }
+			        },
+			        "medida_selecionada.idid": {
+			          "Target": {
+			            "Entity": "medida_selecionada.idid"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida_selecionada"
+			            },
+			            "Object": {
+			              "Role": "medida_selecionada.idid"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medida_selecionadas_have_idids"
+			        }
+			      ]
+			    },
+			    "d_mascara_has_máscara": {
+			      "Binding": {
+			        "ConceptualEntity": "dMascara"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_mascara": {
+			          "Target": {
+			            "Entity": "d_mascara"
+			          }
+			        },
+			        "d_mascara.máscara": {
+			          "Target": {
+			            "Entity": "d_mascara.máscara"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_mascara"
+			            },
+			            "Object": {
+			              "Role": "d_mascara.máscara"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_mascaras_have_máscaras"
+			        }
+			      ]
+			    },
+			    "d_mascara_has_cod_máscara": {
+			      "Binding": {
+			        "ConceptualEntity": "dMascara"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_mascara": {
+			          "Target": {
+			            "Entity": "d_mascara"
+			          }
+			        },
+			        "d_mascara.cod_máscara": {
+			          "Target": {
+			            "Entity": "d_mascara.cod_máscara"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_mascara"
+			            },
+			            "Object": {
+			              "Role": "d_mascara.cod_máscara"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_mascaras_have_cod_máscaras"
+			        }
+			      ]
+			    },
+			    "medida_has_saldo": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.saldo": {
+			          "Target": {
+			            "Entity": "medida.saldo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.saldo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_saldo"
+			        }
+			      ]
+			    },
+			    "f_recebimento_has_medida_m_lancamento_vencimento": {
+			      "Binding": {
+			        "ConceptualEntity": "fRecebimentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_recebimento": {
+			          "Target": {
+			            "Entity": "f_recebimento"
+			          }
+			        },
+			        "medida.m_lancamento_vencimento": {
+			          "Target": {
+			            "Entity": "medida.m_lancamento_vencimento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_recebimento"
+			            },
+			            "Object": {
+			              "Role": "medida.m_lancamento_vencimento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_recebimentos_have_m_lancamento_vencimento"
+			        }
+			      ]
+			    },
+			    "f_pagamento_has_medida_m_lancamento_vencimento": {
+			      "Binding": {
+			        "ConceptualEntity": "fPagamentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pagamento": {
+			          "Target": {
+			            "Entity": "f_pagamento"
+			          }
+			        },
+			        "medida.m_lancamento_vencimento": {
+			          "Target": {
+			            "Entity": "medida.m_lancamento_vencimento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pagamento"
+			            },
+			            "Object": {
+			              "Role": "medida.m_lancamento_vencimento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pagamentos_have_m_lancamento_vencimento"
+			        }
+			      ]
+			    },
+			    "f_recebimento_has_medida_m_lancamento_emissao": {
+			      "Binding": {
+			        "ConceptualEntity": "fRecebimentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_recebimento": {
+			          "Target": {
+			            "Entity": "f_recebimento"
+			          }
+			        },
+			        "medida.m_lancamento_emissao": {
+			          "Target": {
+			            "Entity": "medida.m_lancamento_emissao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_recebimento"
+			            },
+			            "Object": {
+			              "Role": "medida.m_lancamento_emissao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_recebimentos_have_m_lancamento_emissao"
+			        }
+			      ]
+			    },
+			    "f_pagamento_has_medida_m_lancamento_emissao": {
+			      "Binding": {
+			        "ConceptualEntity": "fPagamentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pagamento": {
+			          "Target": {
+			            "Entity": "f_pagamento"
+			          }
+			        },
+			        "medida.m_lancamento_emissao": {
+			          "Target": {
+			            "Entity": "medida.m_lancamento_emissao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pagamento"
+			            },
+			            "Object": {
+			              "Role": "medida.m_lancamento_emissao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pagamentos_have_m_lancamento_emissao"
+			        }
+			      ]
+			    },
+			    "f_pagamento_has_medida_m_despesa_total": {
+			      "Binding": {
+			        "ConceptualEntity": "fPagamentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pagamento": {
+			          "Target": {
+			            "Entity": "f_pagamento"
+			          }
+			        },
+			        "medida.m_despesa_total": {
+			          "Target": {
+			            "Entity": "medida.m_despesa_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pagamento"
+			            },
+			            "Object": {
+			              "Role": "medida.m_despesa_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pagamentos_have_m_despesa_total"
+			        }
+			      ]
+			    },
+			    "f_recebimento_has_medida_m_receita_LY": {
+			      "Binding": {
+			        "ConceptualEntity": "fRecebimentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_recebimento": {
+			          "Target": {
+			            "Entity": "f_recebimento"
+			          }
+			        },
+			        "medida.m_receita_LY": {
+			          "Target": {
+			            "Entity": "medida.m_receita_LY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_recebimento"
+			            },
+			            "Object": {
+			              "Role": "medida.m_receita_LY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_recebimentos_have_m_receita_LY"
+			        }
+			      ]
+			    },
+			    "f_recebimento_has_medida_m_receita_acum": {
+			      "Binding": {
+			        "ConceptualEntity": "fRecebimentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_recebimento": {
+			          "Target": {
+			            "Entity": "f_recebimento"
+			          }
+			        },
+			        "medida.m_receita_acum": {
+			          "Target": {
+			            "Entity": "medida.m_receita_acum"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_recebimento"
+			            },
+			            "Object": {
+			              "Role": "medida.m_receita_acum"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_recebimentos_have_m_receita_acum"
 			        }
 			      ]
 			    },
@@ -4868,7 +6344,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_recebimento_has_medida_m_saldo": {
+			    "f_recebimento_has_medida_m_lancamento": {
 			      "Binding": {
 			        "ConceptualEntity": "fRecebimentos"
 			      },
@@ -4879,9 +6355,9 @@ cultureInfo pt-BR
 			            "Entity": "f_recebimento"
 			          }
 			        },
-			        "medida.m_saldo": {
+			        "medida.m_lancamento": {
 			          "Target": {
-			            "Entity": "medida.m_saldo"
+			            "Entity": "medida.m_lancamento"
 			          }
 			        }
 			      },
@@ -4892,16 +6368,16 @@ cultureInfo pt-BR
 			              "Role": "f_recebimento"
 			            },
 			            "Object": {
-			              "Role": "medida.m_saldo"
+			              "Role": "medida.m_lancamento"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "f_recebimentos_have_m_saldo"
+			          "ID": "f_recebimentos_have_m_lancamento"
 			        }
 			      ]
 			    },
-			    "f_pagamento_has_medida_m_saldo": {
+			    "f_pagamento_has_medida_m_lancamento": {
 			      "Binding": {
 			        "ConceptualEntity": "fPagamentos"
 			      },
@@ -4912,9 +6388,9 @@ cultureInfo pt-BR
 			            "Entity": "f_pagamento"
 			          }
 			        },
-			        "medida.m_saldo": {
+			        "medida.m_lancamento": {
 			          "Target": {
-			            "Entity": "medida.m_saldo"
+			            "Entity": "medida.m_lancamento"
 			          }
 			        }
 			      },
@@ -4925,12 +6401,12 @@ cultureInfo pt-BR
 			              "Role": "f_pagamento"
 			            },
 			            "Object": {
-			              "Role": "medida.m_saldo"
+			              "Role": "medida.m_lancamento"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "f_pagamentos_have_m_saldo"
+			          "ID": "f_pagamentos_have_m_lancamento"
 			        }
 			      ]
 			    },
@@ -9419,39 +10895,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "d_plano_contas_have_conta_nivel_1"
-			        }
-			      ]
-			    },
-			    "d_plano_conta_has_cod_nivel_1": {
-			      "Binding": {
-			        "ConceptualEntity": "dPlanoContas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_plano_conta": {
-			          "Target": {
-			            "Entity": "d_plano_conta"
-			          }
-			        },
-			        "d_plano_conta.cod_nivel_1": {
-			          "Target": {
-			            "Entity": "d_plano_conta.cod_nivel_1"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_plano_conta"
-			            },
-			            "Object": {
-			              "Role": "d_plano_conta.cod_nivel_1"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_plano_contas_have_cod_nivel_1"
 			        }
 			      ]
 			    },

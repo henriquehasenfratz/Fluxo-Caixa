@@ -10,22 +10,21 @@
       "nodes": [
         {
           "location": {
-            "x": 69,
-            "y": 18
+            "x": 377,
+            "y": 0
           },
           "nodeIndex": "dPlanoContas",
           "nodeLineageTag": "06ddbb81-b542-40f3-b067-c19c74d5b2f1",
           "size": {
-            "height": 104,
+            "height": 296,
             "width": 234
           },
-          "zIndex": 1,
-          "expandedHeight": 296
+          "zIndex": 1
         },
         {
           "location": {
             "x": 159,
-            "y": 398
+            "y": 420.5
           },
           "nodeIndex": "fPagamentos",
           "nodeLineageTag": "e3e6358a-85a3-4788-a5f3-c03164a914c7",
@@ -37,8 +36,8 @@
         },
         {
           "location": {
-            "x": 532,
-            "y": 404
+            "x": 695,
+            "y": 336.5
           },
           "nodeIndex": "fRecebimentos",
           "nodeLineageTag": "165667f4-49d3-4983-9843-75c602d155af",
@@ -50,13 +49,13 @@
         },
         {
           "location": {
-            "x": 527,
-            "y": 28
+            "x": 0,
+            "y": 65.5
           },
           "nodeIndex": "dCalendario",
           "nodeLineageTag": "a964c785-2e60-460d-9e05-c49b642b93f2",
           "size": {
-            "height": 104,
+            "height": 128,
             "width": 234
           },
           "zIndex": 4,
@@ -64,13 +63,39 @@
         },
         {
           "location": {
-            "x": 747,
-            "y": 271
+            "x": 1028,
+            "y": 9.5
           },
           "nodeIndex": "Medidas",
           "nodeLineageTag": "f6005536-3aa0-4665-8605-d252caec85a5",
           "size": {
             "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 749,
+            "y": 18.5
+          },
+          "nodeIndex": "dMascara",
+          "nodeLineageTag": "f72425d6-a79d-4aea-a0ca-faa803052d9a",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1312,
+            "y": 270.25
+          },
+          "nodeIndex": "MedidaSelecionada",
+          "nodeLineageTag": "48fc07ed-3a5c-429c-84cf-b1513e19e706",
+          "size": {
+            "height": 128,
             "width": 234
           },
           "zIndex": 0

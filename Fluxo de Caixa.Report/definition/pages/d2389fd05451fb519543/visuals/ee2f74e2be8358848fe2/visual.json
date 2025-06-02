@@ -1,55 +1,97 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
-  "name": "b66fec9fb77070eb2279",
+  "name": "ee2f74e2be8358848fe2",
   "position": {
-    "x": 29.924433249370274,
-    "y": 78.891687657430722,
-    "z": 0,
-    "height": 83.4256926952141,
-    "width": 170.47858942065491,
-    "tabOrder": 0
+    "x": 10.847457627118644,
+    "y": 656.271186440678,
+    "z": 3004,
+    "height": 59.66101694915254,
+    "width": 221.28813559322035,
+    "tabOrder": 3003
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "slicer",
     "query": {
       "queryState": {
         "Values": {
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "fRecebimentos"
                     }
                   },
-                  "Property": "mReceita"
+                  "Property": "Cliente"
                 }
               },
-              "queryRef": "Medidas.mReceita",
-              "nativeQueryRef": "mReceita"
+              "queryRef": "fRecebimentos.Cliente",
+              "nativeQueryRef": "Cliente",
+              "active": true
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Medidas"
-                  }
-                },
-                "Property": "mReceita"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "strictSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "title": [

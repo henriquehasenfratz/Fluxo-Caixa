@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
-  "name": "336e5600c7ebb524e8be",
+  "name": "d7f329c6ba8de0ef44aa",
   "position": {
-    "x": 249.63081861958267,
-    "y": 652.32744783306589,
-    "z": 10000,
-    "height": 31.845906902086679,
-    "width": 98.61958266452649,
-    "tabOrder": 11000
+    "x": 904.08060453400492,
+    "y": 652.896725440806,
+    "z": 13000,
+    "height": 32.6448362720403,
+    "width": 98.841309823677577,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "actionButton",
@@ -29,7 +29,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Tabela'"
+                  "Value": "'Acumulado'"
                 }
               }
             }
@@ -139,7 +139,7 @@
             "bookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'2ce61deeddc01ccc95d9'"
+                  "Value": "'56bb6f4508c8af9b83d2'"
                 }
               }
             }
@@ -153,6 +153,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'LY'"
                 }
               }
             }

@@ -1,0 +1,37 @@
+table dMascara
+	lineageTag: f72425d6-a79d-4aea-a0ca-faa803052d9a
+
+	column 'Cod Máscara'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6ed607ab-3c09-4de1-84a7-e854270b9ec7
+		summarizeBy: none
+		sourceColumn: Cod Máscara
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Máscara
+		dataType: string
+		lineageTag: fc4b851d-e9f7-4d78-b449-729a7d85f273
+		summarizeBy: none
+		sourceColumn: Máscara
+		sortByColumn: 'Cod Máscara'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dMascara = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\jhase\Documents\PROJETOS\FLUXO DE CAIXA\Desafio\01. Base de Dados\MascaraFluxo.xlsx"), null, true),
+				    dMascara_Table = Source{[Item="dMascara",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(dMascara_Table,{{"Cod Máscara", Int64.Type}, {"Máscara", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

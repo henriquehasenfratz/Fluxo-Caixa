@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
-  "name": "b66fec9fb77070eb2279",
+  "name": "d06f4bcf12afb9d359fa",
   "position": {
-    "x": 29.924433249370274,
-    "y": 78.891687657430722,
-    "z": 0,
-    "height": 83.4256926952141,
-    "width": 170.47858942065491,
-    "tabOrder": 0
+    "x": 930.139603232917,
+    "y": 84.643644379133,
+    "z": 14002,
+    "height": 80.881704628949308,
+    "width": 192.79941219691403,
+    "tabOrder": 14001
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "mReceita"
+                  "Property": "mReceitaLY"
                 }
               },
-              "queryRef": "Medidas.mReceita",
-              "nativeQueryRef": "mReceita"
+              "queryRef": "Medidas.mReceitaLY",
+              "nativeQueryRef": "mReceitaLY"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "mReceita"
+                "Property": "mReceitaLY"
               }
             },
             "direction": "Descending"

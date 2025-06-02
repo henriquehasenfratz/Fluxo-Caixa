@@ -12,11 +12,11 @@
     "sections": {
       "ddc417a050a4793d7900": {
         "visualContainers": {
-          "b66fec9fb77070eb2279": {
+          "0e9962c9e7264ea7101e": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "19807059bca20bd1da12",
+                  "name": "62d097ee86e16010ec8c",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -25,7 +25,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "mReceita"
+                      "Property": "mMargemContribuicao"
                     }
                   },
                   "howCreated": 0
@@ -45,18 +45,143 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "mReceita"
+                      "Property": "mMargemContribuicao"
                     }
                   }
                 }
               ]
             }
           },
+          "2d64cde2fceb0b2743bb": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2b9734bdf78403a29eca",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "Ano"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "69e2e3c5f7da8164ccf1",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "TrimestreNome"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c757f20de249f59dd2d0",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "MesNomeAbreviado"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "43a6ec8c2ded95cef0d7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "mReceita"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "731b67108874facf1a94",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "mReceitaLY"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "Ano"
+                    }
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "TrimestreNome"
+                    }
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "MesNomeAbreviado"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "336e5600c7ebb524e8be": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
           "4ab95d2c36138318c8c8": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "12ddc99d4c84af40247d",
+                  "name": "a3dee668d1344cf7e0d3",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -96,22 +221,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "edee8ebd0e34e6d4bf03",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "mReceita"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "dc16fae4f397b3da044f",
+                  "name": "2a7e5fdc968db31d9cb7",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -121,6 +231,21 @@
                         }
                       },
                       "Property": "Conta Nível 3"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c07442e23925133b915b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "mReceita"
                     }
                   },
                   "howCreated": 0
@@ -161,11 +286,81 @@
               }
             }
           },
-          "2d64cde2fceb0b2743bb": {
+          "b3902788884a4b5cd688": {
             "filters": {
+              "byName": {
+                "ed57fc27fb14627bd556": {
+                  "name": "ed57fc27fb14627bd556",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "d",
+                        "Entity": "dCalendario",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "d"
+                                    }
+                                  },
+                                  "Property": "Ano"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "2017L"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "2018L"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "2019L"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "Ano"
+                    }
+                  },
+                  "howCreated": 1
+                }
+              },
               "byExpr": [
                 {
-                  "name": "0566276f9448edaef95e",
+                  "name": "f7fd14d235fd2c127d81",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -174,13 +369,53 @@
                           "Entity": "dCalendario"
                         }
                       },
-                      "Property": "MesNomeAbreviado"
+                      "Property": "MesNome"
                     }
                   },
                   "howCreated": 0
-                },
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "MesNome"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "b66fec9fb77070eb2279": {
+            "filters": {
+              "byExpr": [
                 {
-                  "name": "c115d829735834d505d4",
+                  "name": "69566dada9b941607027",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -193,33 +428,58 @@
                     }
                   },
                   "howCreated": 0
-                },
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
                 {
-                  "name": "b0774ca730d349d3ae78",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "dCalendario"
+                          "Entity": "Medidas"
                         }
                       },
-                      "Property": "Ano"
+                      "Property": "mReceita"
                     }
-                  },
-                  "howCreated": 0
-                },
+                  }
+                }
+              ]
+            }
+          },
+          "daa3f07db27ab71a2915": {
+            "filters": {
+              "byExpr": [
                 {
-                  "name": "fa2c5f434eedd067a226",
+                  "name": "957ee6dd5b5769b12265",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "dCalendario"
+                          "Entity": "dPlanoContas"
                         }
                       },
-                      "Property": "TrimestreNome"
+                      "Property": "Conta Nível 3"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "fc8893a245cfeb238adb",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "mReceita"
                     }
                   },
                   "howCreated": 0
@@ -227,41 +487,25 @@
               ]
             },
             "singleVisual": {
-              "visualType": "columnChart",
+              "visualType": "tableEx",
               "objects": {},
-              "activeProjections": {
-                "Category": [
-                  {
-                    "Column": {
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "dCalendario"
+                          "Entity": "Medidas"
                         }
                       },
-                      "Property": "Ano"
-                    }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dCalendario"
-                        }
-                      },
-                      "Property": "TrimestreNome"
-                    }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dCalendario"
-                        }
-                      },
-                      "Property": "MesNomeAbreviado"
+                      "Property": "mReceita"
                     }
                   }
-                ]
+                }
+              ],
+              "display": {
+                "mode": "hidden"
               }
             }
           },
@@ -375,7 +619,7 @@
                                       [
                                         {
                                           "Literal": {
-                                            "Value": "2019L"
+                                            "Value": "2018L"
                                           }
                                         }
                                       ]
@@ -433,65 +677,18 @@
               }
             }
           },
-          "b3902788884a4b5cd688": {
+          "fc0f6dff7b1159538142": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "91fd80aa6af4483520d4": {
             "filters": {
-              "byName": {
-                "ed57fc27fb14627bd556": {
-                  "name": "ed57fc27fb14627bd556",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "d",
-                        "Entity": "dCalendario",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "In": {
-                            "Expressions": [
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "d"
-                                    }
-                                  },
-                                  "Property": "Ano"
-                                }
-                              }
-                            ],
-                            "Values": [
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "2017L"
-                                  }
-                                }
-                              ],
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "2018L"
-                                  }
-                                }
-                              ],
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "2019L"
-                                  }
-                                }
-                              ]
-                            ]
-                          }
-                        }
-                      }
-                    ]
-                  },
+              "byExpr": [
+                {
+                  "name": "730b457e1f9d4e841729",
+                  "type": "Advanced",
                   "expression": {
                     "Column": {
                       "Expression": {
@@ -502,12 +699,10 @@
                       "Property": "Ano"
                     }
                   },
-                  "howCreated": 1
-                }
-              },
-              "byExpr": [
+                  "howCreated": 0
+                },
                 {
-                  "name": "4109be6f01890e5b3092",
+                  "name": "ecfa2c18d9d06d89ba37",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -516,7 +711,37 @@
                           "Entity": "dCalendario"
                         }
                       },
-                      "Property": "MesNome"
+                      "Property": "TrimestreNome"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9f543242a1cc6b9aac31",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "MesNomeAbreviado"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "80010900ce2e043f59fe",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "mReceitaAcum"
                     }
                   },
                   "howCreated": 0
@@ -524,26 +749,10 @@
               ]
             },
             "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
+              "visualType": "columnChart",
+              "objects": {},
               "activeProjections": {
-                "Values": [
+                "Category": [
                   {
                     "Column": {
                       "Expression": {
@@ -551,201 +760,46 @@
                           "Entity": "dCalendario"
                         }
                       },
-                      "Property": "MesNome"
+                      "Property": "Ano"
+                    }
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "TrimestreNome"
+                    }
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "MesNomeAbreviado"
                     }
                   }
                 ]
-              }
-            }
-          },
-          "7bd7dfad2e99b2573e18": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "7c0aeb085600feb6d860",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "mReceitaOperacional"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "card",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "mReceitaOperacional"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "b5746bbbb46997576ad3": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "bd5880263c770b1613a7",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "mCustoVariavel"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "card",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "mCustoVariavel"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "0e9962c9e7264ea7101e": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "809c6a229987d6dea525",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "mMargemContribuicao"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "card",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "mMargemContribuicao"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "fc0f6dff7b1159538142": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "336e5600c7ebb524e8be": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "daa3f07db27ab71a2915": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "c7464e98d3b5f529d928",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dPlanoContas"
-                        }
-                      },
-                      "Property": "Conta Nível 3"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "ef21494eef15d7f633f3",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "mReceita"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "tableEx",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dPlanoContas"
-                        }
-                      },
-                      "Property": "Conta Nível 3"
-                    }
-                  }
-                }
-              ],
+              },
               "display": {
                 "mode": "hidden"
               }
+            }
+          },
+          "d7f329c6ba8de0ef44aa": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "ecaf3dab5adb43cb6342": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
             }
           }
         }

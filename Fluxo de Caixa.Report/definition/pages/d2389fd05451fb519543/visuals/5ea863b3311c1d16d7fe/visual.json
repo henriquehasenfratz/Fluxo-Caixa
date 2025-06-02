@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
   "name": "5ea863b3311c1d16d7fe",
   "position": {
-    "x": 249.37027707808562,
-    "y": 78.891687657430722,
-    "z": 3,
-    "height": 249.37027707808562,
-    "width": 982.065491183879,
-    "tabOrder": 3
+    "x": 249.4915254237288,
+    "y": 79.1864406779661,
+    "z": 3000,
+    "height": 272.271186440678,
+    "width": 1014.2372881355932,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "hundredPercentStackedColumnChart",
@@ -75,11 +75,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "mSaldo"
+                  "Property": "mLancamento"
                 }
               },
               "queryRef": "Medidas.mSaldo",
-              "nativeQueryRef": "mSaldo"
+              "nativeQueryRef": "mLancamento"
             }
           ]
         }
@@ -144,6 +144,92 @@
             }
           }
         }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "dPlanoContas"
+                          }
+                        },
+                        "Property": "Tipo Lançamento"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'FIXO'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "dPlanoContas"
+                          }
+                        },
+                        "Property": "Tipo Lançamento"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'VARIÁVEL'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -165,48 +251,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "d0c640c7d8a1672e4e2e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dCalendario"
-              }
-            },
-            "Property": "Ano"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "09bf443156c1da996977",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dCalendario"
-              }
-            },
-            "Property": "MesNome"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a62a81f444c929068e53",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "mSaldo"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "61da46181181b19cae26",
         "field": {

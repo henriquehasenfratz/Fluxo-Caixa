@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "12fa02321f6fbd38dd9c",
+  "position": {
+    "x": 729.81631153563558,
+    "y": 84.643644379133,
+    "z": 14001,
+    "height": 78.06024981631154,
+    "width": 161.76340925789862
+  },
+  "visual": {
+    "visualType": "card",
+    "autoSelectVisualType": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "% Var Ano Receita"
+                }
+              },
+              "queryRef": "Medidas.% Var Ano Receita",
+              "nativeQueryRef": "% Var Ano Receita"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

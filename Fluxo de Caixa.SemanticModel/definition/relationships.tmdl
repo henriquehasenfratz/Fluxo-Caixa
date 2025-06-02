@@ -7,10 +7,34 @@ relationship fd1e0614-5789-3751-0fb8-2bd7264df142
 	toColumn: dPlanoContas.'Cod Conta'
 
 relationship 118adcdf-88a0-1a46-5f52-138a7ea25a4c
+	isActive: false
 	fromColumn: fPagamentos.'Data Emissão'
 	toColumn: dCalendario.Data
 
-relationship 24ffa007-c68f-b176-8439-8dc4ecb9bd8d
+relationship 3690b41f-2191-af48-de43-9c2a4de06f9c
+	fromColumn: fRecebimentos.'Data Liquidação'
+	toColumn: dCalendario.Data
+
+relationship 807b339c-64e9-73e9-d3a3-f9f1c9e877f9
+	isActive: false
+	fromColumn: fRecebimentos.'Data Vencimento'
+	toColumn: dCalendario.Data
+
+relationship 23816674-026c-8b74-32e6-cb14ce19ee9b
+	fromColumn: dPlanoContas.'Cod Nivel 1'
+	toColumn: dMascara.'Cod Máscara'
+
+relationship a09a560d-98f9-5117-e984-d0957f0c333d
+	isActive: false
 	fromColumn: fRecebimentos.'Data Emissão'
+	toColumn: dCalendario.Data
+
+relationship 64b2b013-f58d-359f-32c9-40bdc99a0158
+	fromColumn: fPagamentos.'Data Liquidação'
+	toColumn: dCalendario.Data
+
+relationship 594559f1-0418-e72e-4354-f52d334be770
+	isActive: false
+	fromColumn: fPagamentos.'Data Vencimento'
 	toColumn: dCalendario.Data
 

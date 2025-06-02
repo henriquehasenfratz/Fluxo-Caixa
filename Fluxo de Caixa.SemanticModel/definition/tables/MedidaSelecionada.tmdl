@@ -1,0 +1,33 @@
+table MedidaSelecionada
+	lineageTag: 48fc07ed-3a5c-429c-84cf-b1513e19e706
+
+	column IDID
+		dataType: int64
+		formatString: 0
+		lineageTag: 3d310265-5b34-4bbf-a658-6bf517555b49
+		summarizeBy: count
+		sourceColumn: IDID
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column1
+		dataType: string
+		lineageTag: 388e4e18-4aa4-48e5-890c-611e0c58f6a6
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition MedidaSelecionada = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlTSUXLNzSwuPrw4XylWJ1rJCCgQlpqXnJmbmlcCETIGCvlkFpZmpiQeXg5WFwsA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"ID#(lf)ID" = _t, Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"ID#(lf)ID", Int64.Type}, {"Column1", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

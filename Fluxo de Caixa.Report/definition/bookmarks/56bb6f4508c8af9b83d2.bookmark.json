@@ -1,9 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.3.0/schema.json",
-  "displayName": "Tabela",
-  "name": "2ce61deeddc01ccc95d9",
+  "displayName": "Acumulado",
+  "name": "56bb6f4508c8af9b83d2",
   "options": {
-    "targetVisualNames": [],
+    "targetVisualNames": [
+      "d7f329c6ba8de0ef44aa"
+    ],
     "suppressData": true
   },
   "explorationState": {
@@ -16,7 +18,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "0242ee0e55ed64614881",
+                  "name": "f254f07b9ba348982201",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -56,7 +58,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "c4160eec7bb5eece44d5",
+                  "name": "405b1927be2147bb38f8",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -71,7 +73,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "dec41977c03a23cad50d",
+                  "name": "377175ae493cd5f48557",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -86,7 +88,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9e0cf0727a35aee52126",
+                  "name": "bfde637b557c65bcbdaa",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -101,7 +103,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f9fbce41199282f7c4bc",
+                  "name": "78e8a88de16f618c4df2",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -116,7 +118,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "404db00d7969532fbb32",
+                  "name": "6f5bf9c89eda78d31ddd",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -168,6 +170,9 @@
                     }
                   }
                 ]
+              },
+              "display": {
+                "mode": "hidden"
               }
             }
           },
@@ -181,7 +186,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "b38cafe0c4355cc07a0e",
+                  "name": "83ee47f39fe8e582d534",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -221,7 +226,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "32be5d80a1563670f113",
+                  "name": "651b86aa87c994aabebf",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -236,7 +241,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "adb45afd33df27a00a59",
+                  "name": "d17a402f3729f94c9b92",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -360,7 +365,7 @@
               },
               "byExpr": [
                 {
-                  "name": "3fe9489d744fa6648afa",
+                  "name": "7905979b59092a9d3d82",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -415,7 +420,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "9440e24820339c64073a",
+                  "name": "de86ffd396421a3d5862",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -455,7 +460,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "db970bb61eb147cf2b95",
+                  "name": "1b36fd065d18c8367709",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -470,7 +475,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "0459b1a85ec8deca9db4",
+                  "name": "474a6f39c6b2a50ff2dc",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -503,7 +508,10 @@
                     }
                   }
                 }
-              ]
+              ],
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
           "e5e699348a3533e262d7": {
@@ -684,7 +692,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "0c74b00fef8894f16b02",
+                  "name": "bbfda5028ee816c7b718",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -699,7 +707,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "da630edb80c1769cec82",
+                  "name": "76abe68b8ad7bc2622e5",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -714,7 +722,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "30fad1f847b58074b247",
+                  "name": "061059a75e2527544a8c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -729,7 +737,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "05e58256681e734ccb55",
+                  "name": "89731e62c433273ba13c",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -781,9 +789,6 @@
                     }
                   }
                 ]
-              },
-              "display": {
-                "mode": "hidden"
               }
             }
           },

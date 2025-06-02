@@ -9,18 +9,6 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure mReceitasOperacionais =
-			
-			
-			CALCULATE(
-			    [mReceita],
-			    dPlanoContas[Conta Nivel 2] = "RECEITA OPERACIONAIS"
-			)
-		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
-		lineageTag: 804a520e-5998-459e-ba07-8dc65c726d88
-
-		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
-
 	measure mDespesas =
 			
 			SUM(fPagamentos[Valor Pago])
@@ -29,45 +17,217 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure mSaldo = [mReceita] - [mDespesas]
+	measure mLancamento = [mReceita] - [mDespesas]
 		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
 		lineageTag: 8138f190-ec02-4b2c-982c-ca0b648d7775
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure mReceitaOperacional =
+	measure mMargemContribuicao = ```
 			
 			
+			VAR RECEITASLIQ = 
 			CALCULATE(
-			    [mSaldo],
-			    FILTER(
-			        ALL(dPlanoContas),
-			        dPlanoContas[Conta Nivel 2] = "RECEITA OPERACIONAIS")
+			    [Lançamentos por Liquidação],
+			    'dPlanoContas'[Conta Nivel 2] = "RECEITA OPERACIONAIS"
 			)
-		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
-		lineageTag: e1467c15-7b75-470f-a391-4d8045442625
-
-		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
-
-	measure mCustoVariavel =
-			
-			
+			VAR CUSTOVARIAVEL = 
 			CALCULATE(
-			    [mSaldo],
-			    FILTER(
-			        ALL(dPlanoContas),
-			        dPlanoContas[Tipo Lançamento] = "VARIÁVEL")
+			    [Lançamentos por Liquidação],
+			    'dPlanoContas'[Tipo Lançamento] = "VARIÁVEL"
 			)
-		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
-		lineageTag: d28ea360-b30c-47a5-abc3-bbc76c8354f8
-
-		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
-
-	measure mMargemContribuicao = [mReceitaOperacional] + [mCustoVariavel]
+			RETURN
+			RECEITASLIQ + CUSTOVARIAVEL
+			```
 		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
 		lineageTag: b0b2bc7f-ae4a-4875-b5e1-00f89fe79d8c
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure mReceitaAcum =
+			
+			
+			CALCULATE(
+			    [mReceita],
+			    DATESYTD(dCalendario[Data])
+			)
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: c7f06b13-5db9-4d6f-897d-31e7b979c80a
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure mReceitaLY =
+			
+			
+			CALCULATE(
+			    [mReceita],
+			    SAMEPERIODLASTYEAR(dCalendario[Data])
+			)
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: c2047983-e32c-42fc-986f-268ea8cf67cd
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure mDespesaTotal = CALCULATE([mDespesas],ALL(dPlanoContas))
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: 7cfaef12-cfdf-4727-a7ef-7f540d3370b0
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure mLancamentoEmissao =
+			
+			
+			CALCULATE(
+			    [mLancamento],
+			    USERELATIONSHIP(dCalendario[Data],fRecebimentos[Data Emissão]))
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: 50afc2a0-c3cf-48ea-8ff1-a6b779483c8b
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure Saldo = ```
+			
+			VAR vCodMascara = SELECTEDVALUE('dMascara'[Cod Máscara])
+			VAR vResultadoPeriodo = CALCULATE([mLancamentoSelecionado], ALL('dMascara'))
+			VAR vSaldoInicial = 
+			CALCULATE(
+			    [mLancamentoSelecionado],
+			    FILTER(
+			        ALL(dCalendario),
+			        dCalendario[Data] < MIN(dCalendario[Data])
+			    ),
+			    ALL('dMascara')
+			)
+			VAR vSaldoFinal = 
+			CALCULATE(
+			    [mLancamentoSelecionado],
+			    FILTER(
+			        ALL(dCalendario),
+			        dCalendario[Data] <= MAX(dCalendario[Data])
+			    ),
+			    ALL('dMascara')
+			)
+			VAR vResult = 
+			SWITCH(
+			    TRUE(),
+			    vCodMascara = 3 && NOT(ISINSCOPE('dPlanoContas'[Conta Nivel 2])) && NOT(ISINSCOPE('dPlanoContas'[Conta Nível 3])), vResultadoPeriodo,
+			    vCodMascara = 4 && NOT(ISINSCOPE('dPlanoContas'[Conta Nivel 2])) && NOT(ISINSCOPE('dPlanoContas'[Conta Nível 3])), vSaldoInicial,
+			    vCodMascara = 5 && NOT(ISINSCOPE('dPlanoContas'[Conta Nivel 2])) && NOT(ISINSCOPE('dPlanoContas'[Conta Nível 3])), vSaldoFinal,
+			    [mLancamentoSelecionado]
+			)
+			RETURN
+			vResult
+			```
+		formatString: #,0
+		lineageTag: b8bae4b7-737e-4f70-aecb-1e369d3d8951
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure DataSelecionada = SELECTEDVALUE(MedidaSelecionada[IDID])
+		formatString: 0
+		lineageTag: d9ee60be-92d3-498e-a79a-08413d8f0e5f
+
+	measure mLancamentoSelecionado =
+			
+			
+			SWITCH(
+			    TRUE(),
+			    [DataSelecionada] = 1 ,[mLancamentoEmissao],
+			    [DataSelecionada] = 2, [mLancamentoVencimento],
+			    [mLancamento])
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: b8f7dd5f-4bd7-46f4-8e46-a71dbe89d154
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Lançamentos por Emissão' =
+			
+			CALCULATE(
+			    [mReceita],
+			    USERELATIONSHIP(dCalendario[Data], fRecebimentos[Data Emissão])
+			) -
+			CALCULATE(
+			    [mDespesas],
+			    USERELATIONSHIP(dCalendario[Data], fPagamentos[Data Emissão])
+			)
+		lineageTag: 5791b4e6-c3f8-499b-8b39-1f707267a9dd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Lançamentos por Liquidação' =
+			
+			CALCULATE(
+			    [mReceita],
+			    USERELATIONSHIP(dCalendario[Data], fRecebimentos[Data Liquidação])
+			) -
+			CALCULATE(
+			    [mDespesas],
+			    USERELATIONSHIP(dCalendario[Data], fPagamentos[Data Liquidação])
+			)
+		lineageTag: f13e0dbf-1cb5-487c-abea-e4cf8bcf51d2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Receita YTD' = CALCULATE([mReceita], DATESYTD('dCalendario'[Data]))
+		lineageTag: 033984b2-056a-4b2a-aa54-637c6970bef0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Receita YTD LY' =
+			CALCULATE(
+			    [mReceita],
+			    SAMEPERIODLASTYEAR(DATESYTD('dCalendario'[Data])))
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: 0b616ebe-70c3-4235-925c-56c1b618e22c
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure '% Var Ano Receita' = DIVIDE([mReceita] - [mReceitaLY], [mReceitaLY])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 7b7f49cb-adaa-4550-81f4-ccc99e249159
+
+	measure '% Desp. Diretas x Receita' = ```
+			
+			
+			VAR TotalDespesasDiretas = 
+			CALCULATE(
+			    [Lançamentos por Liquidação],
+			    'dPlanoContas'[Conta Nivel 2] = "DESPESAS DIRETAS")
+			VAR TotalReceitasOperacionais = 
+			CALCULATE(
+			    [Lançamentos por Liquidação],
+			    'dPlanoContas'[Conta Nivel 2] = "RECEITA OPERACIONAIS")
+			RETURN
+			DIVIDE( TotalDespesasDiretas, TotalReceitasOperacionais )
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: e58349c6-b675-4106-8d57-2ee1b4c89cd8
+
+	measure 'AV Selecionada' = ```
+			
+			VAR RECOPER = 
+			CALCULATE(
+			    [mLancamentoSelecionado],
+			    FILTER(
+			        ALL('dPlanoContas'),
+			        'dPlanoContas'[Conta Nivel 1] = "ENTRADA"
+			    )
+			)
+			RETURN
+			DIVIDE( [mLancamentoSelecionado], RECOPER )
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 9d3a2055-3ab6-4499-b708-5fa1671069fe
+
+	measure mLancamentoVencimento =
+			
+			
+			CALCULATE(
+			    [mLancamento],
+			    USERELATIONSHIP(dCalendario[Data],fRecebimentos[Data Vencimento]))
+		lineageTag: 9902e05e-5a3d-4196-910f-d25a51730b7c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Column1
 		dataType: string

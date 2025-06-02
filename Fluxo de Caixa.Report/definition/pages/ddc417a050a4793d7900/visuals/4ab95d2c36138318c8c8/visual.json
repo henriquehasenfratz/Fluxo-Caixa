@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
   "name": "4ab95d2c36138318c8c8",
   "position": {
-    "x": 220.35264483627202,
+    "x": 231.23425692695213,
     "y": 80.705289672544069,
-    "z": 1,
+    "z": 1000,
     "height": 81.612090680100749,
-    "width": 155.96977329974811,
-    "tabOrder": 1
+    "width": 156.87657430730476,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "mDespesas"
+                  "Property": "mDespesaTotal"
                 }
               },
-              "queryRef": "Medidas.mDespesas",
-              "nativeQueryRef": "mDespesas"
+              "queryRef": "Medidas.mDespesaTotal",
+              "nativeQueryRef": "mDespesaTotal"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "mDespesas"
+                "Property": "mDespesaTotal"
               }
             },
             "direction": "Descending"
@@ -51,28 +51,75 @@
         "isDefaultSort": true
       }
     },
-    "objects": {
-      "labels": [
+    "visualContainerObjects": {
+      "title": [
         {
           "properties": {
-            "fontFamily": {
+            "titleWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             },
-            "fontSize": {
+            "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "100D"
                 }
               }
-            },
-            "labelDisplayUnits": {
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "titleFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "valueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
                 }
               }
             }
