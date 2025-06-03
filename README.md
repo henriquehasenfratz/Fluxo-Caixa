@@ -1,13 +1,3 @@
-from pathlib import Path
-
-# Leitura do conteúdo original em português
-readme_path = Path("/mnt/data/README_Dashboard_Financeiro.md")
-readme_content = readme_path.read_text(encoding="utf-8")
-
-# Tradução para o inglês
-translated_readme = """
-# Financial Dashboard
-
 This project presents an interactive financial dashboard built with Power BI, aiming to facilitate the visualization and analysis of the company's main revenue and cash flow metrics.
 
 ## Main Features
