@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
   "name": "daa3f07db27ab71a2915",
   "position": {
-    "x": 29.924433249370274,
-    "y": 231.23425692695213,
-    "z": 11000,
-    "height": 417.12846347607052,
-    "width": 366.34760705289671,
-    "tabOrder": 9000
+    "x": 29.625935162094763,
+    "y": 216.35910224438902,
+    "z": 12000,
+    "height": 398.60349127182042,
+    "width": 412.06982543640896,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "tableEx",
@@ -27,8 +27,8 @@
                 }
               },
               "queryRef": "dPlanoContas.Conta Nível 3",
-              "nativeQueryRef": "Receita por Conta Nível 3",
-              "displayName": "Receita por Conta Nível 3"
+              "nativeQueryRef": "Receita por Conta",
+              "displayName": "Receita por Conta"
             },
             {
               "field": {
@@ -74,6 +74,44 @@
               "expr": {
                 "Literal": {
                   "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": 0.6
+                    }
+                  }
                 }
               }
             }

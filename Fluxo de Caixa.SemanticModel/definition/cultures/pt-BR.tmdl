@@ -125,7 +125,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Receita por Conta Nível 3": {
+			          "Receita por Conta": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4544,6 +4544,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.739
 			          }
+			        },
+			        {
+			          "Despesa Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -5114,6 +5124,29 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "medida.m_lancamento_vencimento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "mLancamentoVencimento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "m lancamento vencimento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mLancamentoVencimento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -5351,6 +5384,72 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "d_mascaras_have_d_plano_contas"
+			        }
+			      ]
+			    },
+			    "f_recebimento_has_medida_m_lancamento_vencimento": {
+			      "Binding": {
+			        "ConceptualEntity": "fRecebimentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_recebimento": {
+			          "Target": {
+			            "Entity": "f_recebimento"
+			          }
+			        },
+			        "medida.m_lancamento_vencimento": {
+			          "Target": {
+			            "Entity": "medida.m_lancamento_vencimento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_recebimento"
+			            },
+			            "Object": {
+			              "Role": "medida.m_lancamento_vencimento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_recebimentos_have_m_lancamento_vencimento"
+			        }
+			      ]
+			    },
+			    "f_pagamento_has_medida_m_lancamento_vencimento": {
+			      "Binding": {
+			        "ConceptualEntity": "fPagamentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_pagamento": {
+			          "Target": {
+			            "Entity": "f_pagamento"
+			          }
+			        },
+			        "medida.m_lancamento_vencimento": {
+			          "Target": {
+			            "Entity": "medida.m_lancamento_vencimento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_pagamento"
+			            },
+			            "Object": {
+			              "Role": "medida.m_lancamento_vencimento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_pagamentos_have_m_lancamento_vencimento"
 			        }
 			      ]
 			    },
@@ -5915,72 +6014,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_recebimento_has_medida_m_lancamento_vencimento": {
-			      "Binding": {
-			        "ConceptualEntity": "fRecebimentos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_recebimento": {
-			          "Target": {
-			            "Entity": "f_recebimento"
-			          }
-			        },
-			        "medida.m_lancamento_vencimento": {
-			          "Target": {
-			            "Entity": "medida.m_lancamento_vencimento"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_recebimento"
-			            },
-			            "Object": {
-			              "Role": "medida.m_lancamento_vencimento"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_recebimentos_have_m_lancamento_vencimento"
-			        }
-			      ]
-			    },
-			    "f_pagamento_has_medida_m_lancamento_vencimento": {
-			      "Binding": {
-			        "ConceptualEntity": "fPagamentos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_pagamento": {
-			          "Target": {
-			            "Entity": "f_pagamento"
-			          }
-			        },
-			        "medida.m_lancamento_vencimento": {
-			          "Target": {
-			            "Entity": "medida.m_lancamento_vencimento"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_pagamento"
-			            },
-			            "Object": {
-			              "Role": "medida.m_lancamento_vencimento"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_pagamentos_have_m_lancamento_vencimento"
-			        }
-			      ]
-			    },
 			    "f_recebimento_has_medida_m_lancamento_emissao": {
 			      "Binding": {
 			        "ConceptualEntity": "fRecebimentos"
@@ -6212,138 +6245,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_recebimento_has_medida_m_custo_variavel": {
-			      "Binding": {
-			        "ConceptualEntity": "fRecebimentos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_recebimento": {
-			          "Target": {
-			            "Entity": "f_recebimento"
-			          }
-			        },
-			        "medida.m_custo_variavel": {
-			          "Target": {
-			            "Entity": "medida.m_custo_variavel"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_recebimento"
-			            },
-			            "Object": {
-			              "Role": "medida.m_custo_variavel"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_recebimentos_have_m_custo_variavel"
-			        }
-			      ]
-			    },
-			    "f_pagamento_has_medida_m_custo_variavel": {
-			      "Binding": {
-			        "ConceptualEntity": "fPagamentos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_pagamento": {
-			          "Target": {
-			            "Entity": "f_pagamento"
-			          }
-			        },
-			        "medida.m_custo_variavel": {
-			          "Target": {
-			            "Entity": "medida.m_custo_variavel"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_pagamento"
-			            },
-			            "Object": {
-			              "Role": "medida.m_custo_variavel"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_pagamentos_have_m_custo_variavel"
-			        }
-			      ]
-			    },
-			    "f_recebimento_has_medida_m_receita_operacional": {
-			      "Binding": {
-			        "ConceptualEntity": "fRecebimentos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_recebimento": {
-			          "Target": {
-			            "Entity": "f_recebimento"
-			          }
-			        },
-			        "medida.m_receita_operacional": {
-			          "Target": {
-			            "Entity": "medida.m_receita_operacional"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_recebimento"
-			            },
-			            "Object": {
-			              "Role": "medida.m_receita_operacional"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_recebimentos_have_m_receita_operacional"
-			        }
-			      ]
-			    },
-			    "f_pagamento_has_medida_m_receita_operacional": {
-			      "Binding": {
-			        "ConceptualEntity": "fPagamentos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_pagamento": {
-			          "Target": {
-			            "Entity": "f_pagamento"
-			          }
-			        },
-			        "medida.m_receita_operacional": {
-			          "Target": {
-			            "Entity": "medida.m_receita_operacional"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_pagamento"
-			            },
-			            "Object": {
-			              "Role": "medida.m_receita_operacional"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_pagamentos_have_m_receita_operacional"
-			        }
-			      ]
-			    },
 			    "f_recebimento_has_medida_m_lancamento": {
 			      "Binding": {
 			        "ConceptualEntity": "fRecebimentos"
@@ -6440,39 +6341,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "f_pagamentos_have_m_despesas"
-			        }
-			      ]
-			    },
-			    "f_recebimento_has_medida_m_receitas_operacionais": {
-			      "Binding": {
-			        "ConceptualEntity": "fRecebimentos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_recebimento": {
-			          "Target": {
-			            "Entity": "f_recebimento"
-			          }
-			        },
-			        "medida.m_receitas_operacionais": {
-			          "Target": {
-			            "Entity": "medida.m_receitas_operacionais"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_recebimento"
-			            },
-			            "Object": {
-			              "Role": "medida.m_receitas_operacionais"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_recebimentos_have_m_receitas_operacionais"
 			        }
 			      ]
 			    },

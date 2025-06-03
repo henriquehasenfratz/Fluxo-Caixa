@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
   "name": "0e9962c9e7264ea7101e",
   "position": {
-    "x": 466.48052902277738,
-    "y": 81.822189566495226,
-    "z": 8000,
-    "height": 80.881704628949308,
-    "width": 192.79941219691403,
-    "tabOrder": 8000
+    "x": 526.98254364089769,
+    "y": 71.820448877805489,
+    "z": 9000,
+    "height": 101.44638403990025,
+    "width": 222.643391521197,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "card",
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Medidas.mMargemContribuicao",
-              "nativeQueryRef": "mMargemContribuicao"
+              "nativeQueryRef": "Margem Contribuição",
+              "displayName": "Margem Contribuição"
             }
           ]
         }
@@ -50,6 +51,58 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "title": [

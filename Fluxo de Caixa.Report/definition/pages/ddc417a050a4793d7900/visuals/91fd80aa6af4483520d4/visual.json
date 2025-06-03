@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
   "name": "91fd80aa6af4483520d4",
   "position": {
-    "x": 450.51968503937007,
-    "y": 230.8031496062992,
-    "z": 12000,
-    "height": 418.26771653543307,
-    "width": 812.34645669291342,
-    "tabOrder": 10000
+    "x": 471.32169576059846,
+    "y": 216.35910224438902,
+    "z": 13000,
+    "height": 398.60349127182042,
+    "width": 791.82044887780546,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -158,6 +158,27 @@
             }
           }
         }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": -0.25
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.mReceitaAcum"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -181,7 +202,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "13D"
                 }
               }
             }

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
   "name": "ecaf3dab5adb43cb6342",
   "position": {
-    "x": 722.72040302267,
-    "y": 652.896725440806,
-    "z": 14000,
-    "height": 32.6448362720403,
-    "width": 98.841309823677577,
-    "tabOrder": 14000
+    "x": 667.0324189526184,
+    "y": 622.14463840399,
+    "z": 15000,
+    "height": 33.216957605985037,
+    "width": 98.753117206982537,
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "actionButton",
@@ -30,6 +30,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Mensal'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -69,6 +76,32 @@
           "selector": {
             "id": "hover"
           }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
         }
       ],
       "outline": [
@@ -94,6 +127,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'rectangleRounded'"
+                }
+              }
+            },
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "40L"
                 }
               }
             }
@@ -149,17 +189,17 @@
       "title": [
         {
           "properties": {
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "text": {
               "expr": {
                 "Literal": {
                   "Value": "'YTD'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

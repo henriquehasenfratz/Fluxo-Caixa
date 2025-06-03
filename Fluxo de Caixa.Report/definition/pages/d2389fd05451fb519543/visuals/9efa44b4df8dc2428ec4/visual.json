@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
   "name": "9efa44b4df8dc2428ec4",
   "position": {
-    "x": 11.285819250551066,
-    "y": 470.2424687729611,
-    "z": 3001,
-    "height": 112.85819250551066,
-    "width": 221.01396032329171
+    "x": 27.830423940149625,
+    "y": 418.35411471321692,
+    "z": 4000,
+    "height": 113.11720698254364,
+    "width": 175.96009975062344,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -98,7 +99,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Emissão'"
+                                "Value": "'Liquidação'"
                               }
                             }
                           ]

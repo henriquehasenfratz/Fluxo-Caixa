@@ -118,10 +118,10 @@ table Medidas
 			RETURN
 			vResult
 			```
-		formatString: #,0
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
 		lineageTag: b8bae4b7-737e-4f70-aecb-1e369d3d8951
 
-		annotation PBI_FormatHint = {"isDecimal":true}
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	measure DataSelecionada = SELECTEDVALUE(MedidaSelecionada[IDID])
 		formatString: 0

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
   "name": "d06f4bcf12afb9d359fa",
   "position": {
-    "x": 930.139603232917,
-    "y": 84.643644379133,
-    "z": 14002,
-    "height": 80.881704628949308,
-    "width": 192.79941219691403,
-    "tabOrder": 14001
+    "x": 1028.8279301745636,
+    "y": 71.820448877805489,
+    "z": 17000,
+    "height": 101.44638403990025,
+    "width": 222.643391521197,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "card",
@@ -50,6 +50,58 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000D"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "title": [

@@ -3,7 +3,9 @@
   "displayName": "Tabela",
   "name": "2ce61deeddc01ccc95d9",
   "options": {
-    "targetVisualNames": [],
+    "targetVisualNames": [
+      "daa3f07db27ab71a2915"
+    ],
     "suppressData": true
   },
   "explorationState": {
@@ -16,7 +18,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "0242ee0e55ed64614881",
+                  "name": "6b20a858add88a27b6fc",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -52,11 +54,36 @@
               ]
             }
           },
+          "12fa02321f6fbd38dd9c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "a34e3d94345fdb9bf107",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "% Var Ano Receita"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
           "2d64cde2fceb0b2743bb": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "c4160eec7bb5eece44d5",
+                  "name": "f11f8dad8d45ba364a56",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -71,7 +98,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "dec41977c03a23cad50d",
+                  "name": "d77bb26dd5da2723293f",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -86,7 +113,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9e0cf0727a35aee52126",
+                  "name": "0401d508053a961e983e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -101,7 +128,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f9fbce41199282f7c4bc",
+                  "name": "c0bc19fcc3372055eed6",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -116,7 +143,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "404db00d7969532fbb32",
+                  "name": "c45f096ccccd45b28364",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -181,7 +208,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "b38cafe0c4355cc07a0e",
+                  "name": "d55317f626e5b306bf79",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -190,7 +217,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "mDespesas"
+                      "Property": "mDespesaTotal"
                     }
                   },
                   "howCreated": 0
@@ -210,18 +237,140 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "mDespesas"
+                      "Property": "mDespesaTotal"
                     }
                   }
                 }
               ]
             }
           },
+          "91fd80aa6af4483520d4": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "108535c91a45d60c67b8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "Ano"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "816c97f2dc1260ea8900",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "TrimestreNome"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d5a42558365782e999b7",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "MesNomeAbreviado"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "099aac3f0f5df11358f4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "mReceitaAcum"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "da92494515f8751636b4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Receita YTD LY"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "Ano"
+                    }
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "TrimestreNome"
+                    }
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "MesNomeAbreviado"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
           "ae77184a995f76a9c80a": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "32be5d80a1563670f113",
+                  "name": "bf3515ab50ebaead9631",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -236,7 +385,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "adb45afd33df27a00a59",
+                  "name": "ef384f6000c75f21db10",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -283,6 +432,9 @@
                     }
                   }
                 ]
+              },
+              "display": {
+                "mode": "hidden"
               }
             }
           },
@@ -360,7 +512,7 @@
               },
               "byExpr": [
                 {
-                  "name": "3fe9489d744fa6648afa",
+                  "name": "9f34e357d5f0d528d994",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -415,7 +567,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "9440e24820339c64073a",
+                  "name": "aec90a503e2679c17870",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -451,11 +603,57 @@
               ]
             }
           },
+          "d06f4bcf12afb9d359fa": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "568e385aea307b1d806a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "mReceitaLY"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "mReceitaLY"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "d7f329c6ba8de0ef44aa": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
           "daa3f07db27ab71a2915": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "db970bb61eb147cf2b95",
+                  "name": "032cbbdc0b74b636c2bc",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -470,7 +668,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "0459b1a85ec8deca9db4",
+                  "name": "d0adc37a8fe6079e6959",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -636,7 +834,7 @@
                         "mode": {
                           "expr": {
                             "Literal": {
-                              "Value": "'Dropdown'"
+                              "Value": "'Basic'"
                             }
                           }
                         }
@@ -649,7 +847,7 @@
                         "strictSingleSelect": {
                           "expr": {
                             "Literal": {
-                              "Value": "true"
+                              "Value": "false"
                             }
                           }
                         }
@@ -674,126 +872,13 @@
               }
             }
           },
-          "fc0f6dff7b1159538142": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "91fd80aa6af4483520d4": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "0c74b00fef8894f16b02",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dCalendario"
-                        }
-                      },
-                      "Property": "Ano"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "da630edb80c1769cec82",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dCalendario"
-                        }
-                      },
-                      "Property": "TrimestreNome"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "30fad1f847b58074b247",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dCalendario"
-                        }
-                      },
-                      "Property": "MesNomeAbreviado"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "05e58256681e734ccb55",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "mReceitaAcum"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "columnChart",
-              "objects": {},
-              "activeProjections": {
-                "Category": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dCalendario"
-                        }
-                      },
-                      "Property": "Ano"
-                    }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dCalendario"
-                        }
-                      },
-                      "Property": "TrimestreNome"
-                    }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dCalendario"
-                        }
-                      },
-                      "Property": "MesNomeAbreviado"
-                    }
-                  }
-                ]
-              },
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "d7f329c6ba8de0ef44aa": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
           "ecaf3dab5adb43cb6342": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "fc0f6dff7b1159538142": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
   "name": "336e5600c7ebb524e8be",
   "position": {
-    "x": 249.63081861958267,
-    "y": 652.32744783306589,
-    "z": 10000,
-    "height": 31.845906902086679,
-    "width": 98.61958266452649,
-    "tabOrder": 11000
+    "x": 251.3715710723192,
+    "y": 623.94014962593519,
+    "z": 11000,
+    "height": 31.4214463840399,
+    "width": 98.753117206982537,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "actionButton",
@@ -30,6 +30,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Tabela'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -69,6 +76,32 @@
           "selector": {
             "id": "hover"
           }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
         }
       ],
       "outline": [
@@ -94,6 +127,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'rectangleRounded'"
+                }
+              }
+            },
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "40L"
                 }
               }
             }
