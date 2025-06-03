@@ -1,6 +1,3 @@
-from pathlib import Path
-
-readme_content = """
 # 📊 Dashboard Financeiro – Análise de Receita e Fluxo de Caixa
 
 Este projeto apresenta um **dashboard financeiro interativo** desenvolvido com foco em análise de **receitas, despesas e fluxo de caixa**, permitindo uma visão gerencial e estratégica da performance financeira ao longo do tempo.
@@ -63,20 +60,11 @@ Este projeto apresenta um **dashboard financeiro interativo** desenvolvido com f
 ## 📷 Screenshots
 
 | Receita vs LY | Fluxo de Caixa |
-|:-------------:|:--------------:|
-| ![Receita](./caminho/para/0a8a071a.png) | ![Fluxo de Caixa](./caminho/para/838034ff.png) |
 
----
+
 
 ## 📞 Contato
 
 Desenvolvido por [José Henrique Hasenfratz Brandão](https://www.linkedin.com/in/jhhasenfratz/)  
 Especialista em FinOps | BI | FP&A | Power BI
-"""
-
-# Caminho do arquivo de saída
-readme_path = Path("/mnt/data/README_Dashboard_Financeiro.md")
-readme_path.write_text(readme_content, encoding="utf-8")
-
-readme_path
 
