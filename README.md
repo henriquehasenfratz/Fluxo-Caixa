@@ -1,70 +1,72 @@
-# 📊 Dashboard Financeiro – Análise de Receita e Fluxo de Caixa
+from pathlib import Path
 
-Este projeto apresenta um **dashboard financeiro interativo** desenvolvido com foco em análise de **receitas, despesas e fluxo de caixa**, permitindo uma visão gerencial e estratégica da performance financeira ao longo do tempo.
+# Leitura do conteúdo original em português
+readme_path = Path("/mnt/data/README_Dashboard_Financeiro.md")
+readme_content = readme_path.read_text(encoding="utf-8")
+
+# Tradução para o inglês
+translated_readme = """
+# Financial Dashboard
+
+This project presents an interactive financial dashboard built with Power BI, aiming to facilitate the visualization and analysis of the company's main revenue and cash flow metrics.
+
+## Main Features
+
+### 1. **Revenue Overview**
+- Total Revenue: R$ 27.7M
+- Year-over-Year Growth: 87.81%
+- Contribution Margin: R$ 6.6M
+
+The revenue is broken down by account, such as service provision, merchandise sales, and financial income. This breakdown helps identify which revenue streams contribute most to the company's results.
+
+### 2. **Revenue Trend Analysis**
+- Revenue by Year, Quarter, and Month.
+- Comparative analysis with the previous year (ReceitaLY).
+- View modes: Monthly and Cumulative.
+
+The chart allows for tracking seasonal revenue behaviors and identifying months with significant performance deviations.
+
+### 3. **Expense and Cash Flow Analysis**
+- Total Expenses: R$ 31.1M
+- Expense vs. Revenue (%): -50.95%
+- Contribution Margin Analysis.
+- Fixed vs. Variable Expense Distribution by Month.
+
+### 4. **Cash Flow Table**
+- Entries and Exits by month.
+- Initial and Final Balances.
+- Period Result and Variation (%).
+
+Provides a clear monthly view of financial movements and helps in decision-making for managing working capital.
+
+## Filters and Interactivity
+
+The dashboard includes filters by:
+- Account Type (Operational / Non-operational)
+- Date Type (Issue / Settlement / Due)
+- Supplier
+- Client
+- Year and Month
+
+These filters allow for customized and detailed analysis according to user needs.
+
+## Technologies Used
+
+- **Power BI**: Data modeling, visual creation, and interactivity.
+- **DAX**: Calculated measures and dynamic indicators.
+- **ETL Tools**: Used for data preparation (if applicable).
+
+## How to Use
+
+1. Open the `.pbix` file in Power BI Desktop.
+2. Update the data source paths if necessary.
+3. Use the filters and buttons to navigate and explore the dashboard.
+
+## Author
+
+Developed by José Henrique Hasenfratz Brandão —
 
 ---
 
-## ✨ Funcionalidades
-
-- **Análise de Receita por Conta**  
-  Visualização detalhada da origem da receita, destacando categorias como:
-  - Prestação de Serviços
-  - Vendas de Mercadorias
-  - Empréstimos e Financiamentos
-  - Produtos e Serviços Técnicos
-
-- **KPIs Financeiros Principais**
-  - Receita Total: `R$ 27,677K`
-  - Despesa Total: `R$ 31,188K`
-  - Margem de Contribuição: `R$ 6,601K`
-  - % de Variação Anual da Receita: `+87.81%`
-  - Receita do Ano Anterior (mReceitaLY): `R$ 14,737K`
-
-- **Evolução Mensal da Receita**
-  Gráfico comparativo entre receita atual (Receita) e receita do ano anterior (ReceitaLY), por mês e trimestre.
-
-- **Análise de Despesas Fixas e Variáveis**
-  Visualização percentual por tipo de despesa ao longo dos meses.
-
-- **Fluxo de Caixa**
-  Tabela dinâmica com entradas, saídas, saldo inicial/final e resultado do período mês a mês.
-
----
-
-## 🧩 Filtros Interativos
-
-- **Ano**: 2017, 2018, 2019  
-- **Mês**: Filtro mensal dinâmico  
-- **Tipo de Conta**: Operacional e Não Operacional  
-- **Tipo de Data**: Emissão, Liquidação, Vencimento  
-- **Cliente / Fornecedor**: Filtros específicos para análise granular
-
----
-
-## 🛠 Tecnologias Utilizadas
-
-- Power BI (Visualizações, DAX, Filtros e Interações)
-- Modelagem de dados em Power Query
-- Transformações e cálculos com foco gerencial
-
----
-
-## 📌 Observações
-
-- O dashboard permite **mudança entre visualização visual e tabular**, tornando a análise mais flexível.
-- Todos os KPIs e gráficos são **dinâmicos e interdependentes**, respeitando os filtros selecionados.
-- Ferramenta ideal para **análise de lucratividade, planejamento financeiro e controle de custos**.
-
----
-
-## 📷 Screenshots
-
-| Receita vs LY | Fluxo de Caixa |
-
-
-
-## 📞 Contato
-
-Desenvolvido por [José Henrique Hasenfratz Brandão](https://www.linkedin.com/in/jhhasenfratz/)  
-Especialista em FinOps | BI | FP&A | Power BI
-
+If this project helped you or inspired your own dashboards, feel free to leave a ⭐ on GitHub or connect on LinkedIn!
+"""
