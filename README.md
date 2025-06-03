@@ -1,5 +1,5 @@
 This project presents an interactive financial dashboard built with Power BI, aiming to facilitate the visualization and analysis of the company's main revenue and cash flow metrics.
-
+---
 ## Main Features
 
 ### 1. **Revenue Overview**
@@ -48,13 +48,13 @@ These filters allow for customized and detailed analysis according to user needs
 
 ## How to Use
 
-1. Open the `.pbix` file in Power BI Desktop.
+1. Open the `.pbip` file in Power BI Desktop.
 2. Update the data source paths if necessary.
 3. Use the filters and buttons to navigate and explore the dashboard.
 
-## Author
-
-Developed by José Henrique Hasenfratz Brandão —
+## ScreenShots
+![Captura de tela 2025-06-03 120321](https://github.com/user-attachments/assets/00424234-c8af-466c-9cc7-760ac1a48afb)  
+![Captura de tela 2025-06-03 120339](https://github.com/user-attachments/assets/2b217704-89d4-403b-b9f3-f93e58023851)
 
 ---
 
