@@ -53,6 +53,9 @@ These filters allow for customized and detailed analysis according to user needs
 3. Use the filters and buttons to navigate and explore the dashboard.
 
 ## ScreenShots
+
+Link: https://app.powerbi.com/view?r=eyJrIjoiMWJhNTdlNzItMmUwZC00YWYwLWE5YWItMzQ0MzJmMWQ2YTUwIiwidCI6ImZlNzhmYjgzLTAwMTAtNDE5ZS05NTQ4LThhMjE1NTFlOWMxYSJ9
+
 ![Captura de tela 2025-06-03 120321](https://github.com/user-attachments/assets/00424234-c8af-466c-9cc7-760ac1a48afb)  
 ![Captura de tela 2025-06-03 120339](https://github.com/user-attachments/assets/2b217704-89d4-403b-b9f3-f93e58023851)
 
